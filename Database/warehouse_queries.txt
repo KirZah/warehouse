@@ -1,0 +1,198 @@
+
+BEGIN
+# SELECT goods.id as "id", Product_name, Price, is_sold as "is sold?", Production_Date,
+#            IF(ISNULL(shelf_life), NULL, DATE_ADD(production_date, INTERVAL shelf_life DAY)) as Expiration_Date,
+#            description, Note
+#         FROM goods Left join catalog ON goods.catalog_id = catalog.id
+#         ORDER BY id DESC;
+#
+# SELECT id, Product_name, Price, shelf_life, description FROM catalog
+#         ORDER BY id DESC;
+#
+# SELECT id, Name, Address, Phone, Email, Note FROM suppliers
+#         ORDER BY id DESC;
+#
+# SELECT supplies.id, name, date, delivery_note, supplies.note FROM supplies LEFT JOIN suppliers ON supplies.suppliers_id = suppliers.id
+#        ORDER BY id DESC;
+#
+# SELECT goods_id, shelf FROM storage
+#        ORDER BY goods_id DESC;
+#
+# SELECT id, Name, Address, Phone, Email, Note FROM customers
+#                         ORDER BY id DESC;
+#
+#
+#
+# SELECT goods.id as "id", Product_name, Price, is_sold as "is sold?", Production_Date,
+#            IF(ISNULL(shelf_life), NULL, DATE_ADD(production_date, INTERVAL shelf_life DAY)) as Expiration_Date,
+#            description, Note
+#         FROM goods Left join catalog ON goods.catalog_id = catalog.id
+#         WHERE goods.id IN (SELECT goods_id FROM goods_supplies
+#                 WHERE supplies_id = 1)
+#         ORDER BY goods.id DESC;
+#
+# SELECT goods.id, is_sold as "is sold?", Production_Date,
+#        IF(ISNULL(shelf_life), NULL, DATE_ADD(production_date, INTERVAL shelf_life DAY)) as Expiration_Date, Note
+#         FROM goods left join catalog on goods.catalog_id = catalog.id
+#         WHERE catalog_id = 1
+#         ORDER BY id DESC;
+#
+# SELECT id, date, delivery_note, note FROM supplies
+#         WHERE suppliers_id = 1
+#         ORDER BY id DESC;
+#
+# SELECT goods_id, shelf, product_name, price, production_date,
+#        IF(ISNULL(shelf_life), NULL, DATE_ADD(production_date, INTERVAL shelf_life DAY)) as Expiration_Date,
+#        description, note
+# FROM storage LEFT JOIN goods on storage.goods_id = goods.id LEFT JOIN catalog on goods.catalog_id = catalog.id
+# WHERE goods_id = 6
+# ORDER BY goods_id DESC;
+#
+# SELECT id, Name, Address, Phone, Email, Note FROM customers
+# ORDER BY id DESC;
+#
+# SELECT shipments.id, name as "Customers Name", date, delivery_note, shipments.note
+#     FROM shipments LEFT JOIN customers ON shipments.customers_id = customers.id
+# ORDER BY id DESC;
+#
+# SELECT shipments.id, date, delivery_note, shipments.note FROM shipments
+# WHERE customers_id = 1
+# ORDER BY id DESC;
+#
+# SELECT goods.id, catalog.product_name, catalog.price, goods.is_sold, production_date,
+#        IF(ISNULL(shelf_life), NULL, DATE_ADD(production_date, INTERVAL shelf_life DAY)) as "Expiration Date",
+#        catalog.description, goods.note as "Product Note", storage.shelf, supplies.id, supplies.date, supplies.delivery_note,
+#        supplies.note, suppliers.name, suppliers.address, suppliers.phone, suppliers.email, suppliers.note,
+#        shipments.id, shipments.date, shipments.delivery_note, shipments.note,
+#        customers.id, customers.name, customers.address, customers.phone, customers.email, customers.note
+#     FROM goods LEFT JOIN catalog on goods.catalog_id = catalog.id LEFT JOIN storage on goods.id = storage.goods_id
+#     LEFT JOIN goods_supplies on goods.id = goods_supplies.goods_id LEFT JOIN supplies on goods_supplies.supplies_id = supplies.id
+#     LEFT JOIN suppliers on supplies.suppliers_id = suppliers.id LEFT JOIN goods_shipments on goods.id = goods_shipments.goods_id
+#     LEFT JOIN shipments on goods_shipments.shipments_id = shipments.id LEFT JOIN customers on shipments.customers_id = customers.id
+#     WHERE goods.id = 1
+# ORDER BY goods.id DESC;
+#
+#
+# select suppliers.name from suppliers
+# where suppliers.name LIKE '%A%'
+# Order by name DESC
+#
+# use warehouse;
+# select MAX(id)+1 from suppliers
+
+# UPDATE mysql.user SET user='Chyvak88' WHERE user='root';
+# UPDATE mysql.user SET Password=PASSWORD('Chyvak88') WHERE User='Chyvak88'; FLUSH PRIVILEGES;
+# UPDATE mysql.user SET authentication_string='$A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED' WHERE User='Chyvak88';
+
+# SET PASSWORD FOR 'Chyvak88'@'localhost' = 'Chyvak88';
+# SET PASSWORD FOR 'Chyvak88'@'localhost' = 'Chyvak88';
+#
+# SELECT * FROM mysql.user;
+#
+#
+#
+# UPDATE user SET Password=PASSWORD('1234')
+#     WHERE User='Chyvak88';
+#     FLUSH PRIVILEGES;
+
+# select supplier_id, date, delivery_note from supplies
+#                             where supplier_id = %(supplier_id)s AND supplier_id = %(supplier_id)s
+#                                                 AND delivery_note = %(delivery_note)s
+
+# use warehouse;
+# select goods.id from goods
+# where goods.id NOT IN (
+#     select storage.goods_id from storage
+#     )
+
+# use warehouse;
+# select product_name, price, shelf_life, description, production_date, note from goods LEFT JOIN catalog c on goods.catalog_id = c.id
+# where goods.id = 1
+
+# use warehouse;
+# DELETE FROM storage
+# WHERE goods_id = 6
+
+# use warehouse;
+# UPDATE goods SET is_sold = 1  #, field2 = new-value2
+# WHERE goods.id = 8;
+
+# use warehouse;
+# Select goods_id from goods_shipments
+# WHERE goods_id=1; # если возвр. ноль кортежей, то значит добавлять на склад можно
+#                   # если возвр. один кортеж, то значит, что добавлять на склад нельзя (ведь товар уже продан)
+
+# use warehouse;
+# DELETE from goods
+# WHERE id = 9;
+
+
+
+# Chyvak88 - root
+# administrator
+# boss
+# PC_operator
+# warehouseman
+# salesman
+
+# ALTER USER 'newuser'@'localhost'
+#   IDENTIFIED WITH mysql_native_password
+#              BY 'NEW_USER_PASSWORD'
+#              REPLACE 'pass';
+
+#CREATE USER IF NOT EXISTS 'Chyvak88'@'localhost' IDENTIFIED BY 'Chyvak88';
+#GRANT ALL PRIVILEGES ON warehouse.* TO 'Chyvak88'@'localhost';
+#FLUSH PRIVILEGES;
+
+
+
+
+
+
+# DROP USER 'customer'@'localhost';
+# ALTER USER 'username'@'localhost' IDENTIFIED BY 'NEW_USER_PASSWORD';
+# ALTER USER '1' IDENTIFIED BY 'Chyvak88';  #
+#
+# SELECT CURRENT_USER();
+#
+#
+# DELETE FROM storage
+# LIMIT 10000;
+
+# use warehouse;
+# SELECT product_name from catalog
+# WHERE product_name LIKE '%i%' AND
+#       product_name NOT IN (SELECT product_name from catalog
+#                             WHERE product_name LIKE 'i%')
+
+
+END;
+
+
+# SELECT(
+
+          (SELECT goods.id                                                                         as "id",
+                 Product_name,
+                 Price,
+                 is_sold                                                                          as "is sold?",
+                 Production_Date,
+                 IF(ISNULL(shelf_life), NULL, DATE_ADD(production_date, INTERVAL shelf_life DAY)) as Expiration_Date,
+                 description,
+                 Note
+          FROM goods
+                   Left join catalog ON goods.catalog_id = catalog.id
+          WHERE product_name LIKE '3%'
+          ORDER BY product_name DESC)
+        UNION (SELECT goods.id                                                                         as "id",
+                       Product_name,
+                       Price,
+                       is_sold                                                                          as "is sold?",
+                       Production_Date,
+                       IF(ISNULL(shelf_life), NULL, DATE_ADD(production_date, INTERVAL shelf_life DAY)) as Expiration_Date,
+                       description,
+                       Note
+                FROM goods
+                         Left join catalog ON goods.catalog_id = catalog.id
+                WHERE product_name NOT LIKE '3%' AND product_name LIKE '%3%'
+                ORDER BY product_name DESC);
+#       );

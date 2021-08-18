@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c691e0bb-0dc7-4916-bdca-9a625ea0eb6e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ProjectId" id="1kFtOQ2quhwbm1X7EeoJNPg44zF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DBE.Init.BalloonShown" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1608260159591">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1608260159591" />
+    <state x="581" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1608260149892">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605564796563" />
+    <state x="581" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1608260149892" />
+  </component>
+</project>
