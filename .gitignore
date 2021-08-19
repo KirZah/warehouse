@@ -1,4 +1,4 @@
-# added by me
+# Мои исключения:
 Client/__pycache__/
 Client/dist/
 Client/build/
@@ -6,9 +6,9 @@ Client/dist/
 
 # Не знаю что это за файлы
 *.swp
+*.spec
 
-# ALL COMMON IGNORES
-
+# Часто встречаемые исключения:
 
 # Compiled source #
 ###################
