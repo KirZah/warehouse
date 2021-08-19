@@ -1,6 +1,11 @@
 # added by me
 Client/__pycache__/
+Client/dist/
+Client/build/
+Client/dist/
 
+# Не знаю что это за файлы
+*.swp
 
 # ALL COMMON IGNORES
 
